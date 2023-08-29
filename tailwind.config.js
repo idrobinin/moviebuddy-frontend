@@ -10,7 +10,13 @@ export default {
     //   'xs':{'max': '480px'},
     //   'xxs':{'max': '380px'},
     // },
-    extend: {},
+    extend: {
+      colors: {
+        "basic-black": "#1d2024",
+        "bright-basic-black": "#1f2326",
+        orange: "#f37515",
+      },
+    },
   },
   plugins: [],
 };
