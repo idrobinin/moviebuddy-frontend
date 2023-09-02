@@ -1,5 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Page from "../components/layout/Page.vue";
+</script>
 
 <template>
-  <div>Movie</div>
+  <Page>
+    <template #title>Movie</template>
+  </Page>
 </template>

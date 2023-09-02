@@ -1,5 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Page from "../components/layout/Page.vue";
+</script>
 
 <template>
-  <div>Search</div>
+  <Page>
+    <template #title>Search</template>
+  </Page>
 </template>

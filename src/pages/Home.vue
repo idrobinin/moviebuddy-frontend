@@ -1,5 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Page from "../components/layout/Page.vue";
+</script>
 
 <template>
-  <div>Home</div>
+  <Page>
+    <template #title>Home</template>
+  </Page>
 </template>
