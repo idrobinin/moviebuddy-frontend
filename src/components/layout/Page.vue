@@ -11,7 +11,7 @@ defineProps<Props>();
     class="bg-basic-black flex h-full min-w-0 flex-1 flex-col overflow-y-auto"
   >
     <!--    upper part of layout-->
-    <div class="py-9 px-4 flex justify-between">
+    <div class="py-7 px-5 flex justify-between">
       <h1 v-if="title" class="text-4xl font-black text-white">{{ title }}</h1>
       <h1 v-else class="text-4xl font-black text-white">
         <slot name="title" />
