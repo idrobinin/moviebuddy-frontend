@@ -26,7 +26,7 @@ const emits = defineEmits<{
             :class="
               id == activeTabId ? 'bg-orange-500' : 'bg-bright-basic-black'
             "
-            class="flex items-center rounded-2xl justify-center gap-2 px-7 py-3 text-white shadow hover:bg-basic-orange hover:scale-110 hover:shadow-zinc-950 hover:shadow-md"
+            class="flex items-center rounded-2xl justify-center gap-2 px-8 py-3 text-white shadow transition-transform duration-300 transform hover:bg-basic-orange hover:scale-105 hover:shadow-zinc-950 hover:shadow-md"
           >
             <div>{{ emoji }}</div>
             <div>{{ title }}</div>

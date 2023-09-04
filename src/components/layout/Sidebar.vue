@@ -43,7 +43,7 @@ const route = useRoute();
         :class="
           route.name == nav.to.name
             ? 'text-gray-400'
-            : 'bg-basic-black hover:scale-110 hover:shadow-zinc-950 hover:shadow-md'
+            : 'bg-basic-black hover:scale-105 hover:shadow-zinc-950 hover:shadow-md transition-transform duration-300 transform'
         "
       >
         <component :is="nav.icon" class="w-8 h-8" />
