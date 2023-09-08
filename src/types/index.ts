@@ -1,4 +1,4 @@
-export interface Banner {
+export interface IBanner {
   year: string;
   duration: string;
   id: string;
@@ -8,8 +8,16 @@ export interface Banner {
   poster: string;
 }
 
-export interface Tab {
+export interface ITab {
   title: string;
   emoji: string;
   id: string;
+}
+
+export interface IFlashNews {
+  id: number;
+  rotate: number;
+  image: string;
+  text: string;
+  date: string;
 }

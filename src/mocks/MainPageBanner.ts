@@ -1,6 +1,6 @@
-import { Banner } from "../types";
+import { IBanner } from "../types";
 
-export const bannerMock: Banner = {
+export const bannerMock: IBanner = {
   year: "2014",
   duration: "1h 52min",
   id: "1",

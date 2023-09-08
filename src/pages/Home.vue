@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import Page from "../components/layout/Page.vue";
 import Tabs from "../components/Tabs.vue";
-import { ref } from "vue";
+import { ref, defineAsyncComponent } from "vue";
 import { tabsMock } from "../mocks/tabs";
 import MainBanner from "../components/MainBanner.vue";
-import FlashNews from "../components/FlashNews.vue";
 import ContentRow from "../components/ContentRow.vue";
+
+const FlashNews = defineAsyncComponent(() => {
+  return import("../components/FlashNews.vue");
+});
 
 const activeTabId = ref<string>("1");
 const onTabChange = (tabId: string) => {

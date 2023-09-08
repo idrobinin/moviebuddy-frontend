@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { Tab } from "../types/index.ts";
+import { ITab } from "../types/index.ts";
 defineProps<{
-  tabs: Tab[];
+  tabs: ITab[];
   activeTabId: string;
 }>();
 
