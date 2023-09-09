@@ -1,5 +1,5 @@
-import { Tab } from "../types";
-export const tabsMock: Tab[] = [
+import { ITab } from "../types";
+export const tabsMock: ITab[] = [
   {
     title: "All",
     emoji: "🍿",

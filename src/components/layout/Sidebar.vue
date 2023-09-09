@@ -10,6 +10,7 @@ import {
   MagnifyingGlassCircleIcon as MagnifyingGlassCircleSolidIcon,
 } from "@heroicons/vue/24/solid";
 import { useRoute } from "vue-router";
+import { onMounted, ref } from "vue";
 
 const menu = [
   {
@@ -34,7 +35,7 @@ const route = useRoute();
 
 <template>
   <nav class="block bg-bright-basic-black">
-    <div class="flex flex-col py-9 px-7 relative space-y-3">
+    <div class="flex flex-col py-9 px-7 relative space-y-3 sticky top-0">
       <router-link
         v-for="(nav, i) in menu"
         :to="nav.to"
