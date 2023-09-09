@@ -6,6 +6,7 @@ import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/vue/24/solid";
 import { IFlashNews } from "../types/index.ts";
 
 // Slider
+const isBackDirection = ref<boolean>(false);
 const currSlideIndex = ref<number>(0);
 const currNews = computed(() => {
   return FlashNewsMock[currSlideIndex.value];
@@ -19,6 +20,7 @@ const nextSlide = () => {
   if (isLastSlide.value) {
     return;
   }
+  isBackDirection.value = false;
   toggleLoading();
   currSlideIndex.value++;
 };
@@ -26,6 +28,7 @@ const prevSlide = () => {
   if (currSlideIndex.value <= 0) {
     return;
   }
+  isBackDirection.value = true;
   toggleLoading();
   currSlideIndex.value--;
 };
@@ -42,7 +45,7 @@ const toggleLoading = () => {
 
 <template>
   <Stack>
-    <Transition name="slide-fade">
+    <Transition :name="isBackDirection ? 'slide-fade-reverse' : 'slide-fade'">
       <div
         v-show="!loading"
         class="w-full h-full bg-white rotate-3 drop-shadow-xl p-6 rounded-2xl"
@@ -86,20 +89,36 @@ const toggleLoading = () => {
 </template>
 
 <style scoped>
-.slide-fade-enter-active
-  .slide-fade-leave-active
-  .slide-fade-reverse-enter-active
-  .slide-fade-reverse-leave-active {
-  transition: all 0.5s ease;
+/* Начальное смещение */
+.slide-fade-enter-active,
+.slide-fade-leave-active,
+.slide-fade-reverse-enter-active,
+.slide-fade-reverse-leave-active {
+  transition:
+    opacity 1s,
+    transform 1s;
 }
-.slide-fade-enter {
-  transform: translateX(150px);
-  opacity: 0;
-}
-.slide-fade-leave-to {
-  transform: translateX(-150px);
-  opacity: 1;
+.slide-fade-enter,
+.slide-fade-leave-to,
+.slide-fade-reverse-enter,
+.slide-fade-reverse-leave-to {
+  opacity: 0.7;
+  transform: translateX(0); /* Значение 0 при начале анимации */
 }
 
-/* Back scrolling */
+/* Сдвиг влево */
+.slide-fade-enter {
+  transform: translateX(-5px); /* При входе сдвиг влево */
+}
+.slide-fade-leave-to {
+  transform: translateX(25px); /* При выходе сдвиг влево */
+}
+
+/* Сдвиг вправо */
+.slide-fade-reverse-enter {
+  transform: translateX(25px); /* При входе сдвиг вправо */
+}
+.slide-fade-reverse-leave-to {
+  transform: translateX(-25px); /* При выходе сдвиг вправо */
+}
 </style>
