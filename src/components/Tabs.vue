@@ -7,7 +7,8 @@ defineProps<{
 
 // передаем эмит с id таба для детекта активного таба
 const emits = defineEmits<{
-  (e: "on-tab-change", activeTabId: string): void;
+  "on-tab-change": [activeTabId: string];
+  // (e: "on-tab-change", activeTabId: string): void;
 }>();
 </script>
 

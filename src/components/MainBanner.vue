@@ -6,7 +6,7 @@ const bg = `url(${bannerMock.poster})`;
 
 <template>
   <div
-    class="banner flex min-h-[470px] w-[60%] rounded-2xl overflow-hidden drop-shadow-xl cursor-pointer"
+    class="banner flex self-stretch w-[60%] rounded-2xl overflow-hidden drop-shadow-xl cursor-pointer"
   >
     <div class="text-white p-8 self-end">
       <h1 class="text-4xl mb-2 font-bold">{{ bannerMock.title }}</h1>

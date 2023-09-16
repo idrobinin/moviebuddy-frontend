@@ -10,7 +10,6 @@ import {
   MagnifyingGlassCircleIcon as MagnifyingGlassCircleSolidIcon,
 } from "@heroicons/vue/24/solid";
 import { useRoute } from "vue-router";
-import { onMounted, ref } from "vue";
 
 const menu = [
   {
