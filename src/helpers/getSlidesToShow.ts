@@ -1,7 +1,8 @@
-import { computed } from "vue";
+import { computed, Ref, UnwrapRef } from "vue";
+
 // передаем количество паказываемых слайдов в карусель в зависимости от ширины экрана пользователя
 
-export function getSlidesToShow(screenWidth) {
+export function getSlidesToShow(screenWidth: Ref<UnwrapRef<number>>) {
   const slides = computed((): number => {
     if (screenWidth.value < 540) {
       return 1.3;
@@ -11,6 +12,5 @@ export function getSlidesToShow(screenWidth) {
       return 3.5;
     }
   });
-
   return { slides };
 }
