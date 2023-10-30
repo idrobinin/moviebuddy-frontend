@@ -75,6 +75,16 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+.controls {
+  @apply flex items-center w-full justify-between px-4 m-0 opacity-0;
+  transition: 0.5s;
+  transition-property: opacity, visibility;
+  transform: translateY(-70px);
+}
+.controls:hover {
+  @apply opacity-100;
+}
+
 .time-track {
   @apply cursor-pointer rounded-2xl self-center opacity-70 w-[90%] h-[8px] outline-none;
   background-image: linear-gradient(#f37515, #f37515);
@@ -86,14 +96,5 @@ onUnmounted(() => {
   @apply w-[18px] h-[18px] rounded-full bg-basic-orange cursor-pointer;
   -webkit-appearance: none;
   outline: none;
-}
-.controls {
-  @apply flex items-center w-full justify-between px-4 m-0 opacity-0;
-  transition: 0.5s;
-  transition-property: opacity, visibility;
-  transform: translateY(-50px);
-}
-.controls:hover {
-  @apply opacity-100;
 }
 </style>

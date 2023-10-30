@@ -3,7 +3,6 @@ import Stack from "./Stack.vue";
 import { computed, ref } from "vue";
 import { flashNews as FlashNewsMock } from "../mocks/news.ts";
 import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/vue/24/solid";
-import { IFlashNews } from "../types/index.ts";
 
 // Slider
 const isBackDirection = ref<boolean>(false);

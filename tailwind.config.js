@@ -16,6 +16,9 @@ export default {
         "bright-basic-black": "#1f2326",
         "basic-orange": "#f37515",
       },
+      rotate: {
+        270: "270deg",
+      },
     },
   },
   plugins: [],
