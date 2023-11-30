@@ -10,20 +10,21 @@ import {
   MagnifyingGlassCircleIcon as MagnifyingGlassCircleSolidIcon,
 } from "@heroicons/vue/24/solid";
 import { useRoute } from "vue-router";
+import { routeGuard } from "../../router";
 
 const menu = [
   {
-    to: { name: "home" },
+    to: routeGuard({ name: "home" }),
     icon: HomeOutlineIcon,
     activeIcon: HomeSolidIcon,
   },
   {
-    to: { name: "search" },
+    to: routeGuard({ name: "search" }),
     icon: MagnifyingGlassCircleOutlineIcon,
     activeIcon: MagnifyingGlassCircleSolidIcon,
   },
   {
-    to: { name: "movie", params: { id: "1" } },
+    to: routeGuard({ name: "movie", params: { id: "1" } }),
     icon: FilmOutlineIcon,
     activeIcon: FilmSolidIcon,
   },
@@ -34,7 +35,7 @@ const route = useRoute();
 
 <template>
   <nav class="block bg-bright-basic-black">
-    <div class="flex flex-col py-9 px-7 relative space-y-3 sticky top-0">
+    <div class="flex flex-col py-9 px-7 space-y-3 sticky top-0">
       <router-link
         v-for="(nav, i) in menu"
         :to="nav.to"
