@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/vue": "^2.0.18",
+    "esbuild": "^0.19.8",
     "floating-vue": "^2.0.0-beta.24",
     "pinia": "^2.1.6",
     "prettier": "^3.0.2",
